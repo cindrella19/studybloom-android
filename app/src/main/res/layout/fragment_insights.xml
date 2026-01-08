@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg_lines">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insights"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_text"
+            android:gravity="center"
+            android:padding="20dp" />
+
+        <ProgressBar
+            android:id="@+id/insightLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/insightError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connection issue. Tap refresh."
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <!-- API 1: World Time -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@color/cream_white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="World Time (UTC)"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/insightTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- API 2: Motivation -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@color/cream_white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Study Motivation"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/insightQuote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:fontStyle="italic" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- API 3: Productivity -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@color/cream_white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Productivity Fact"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/insightPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/refreshInsightsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Refresh Insights"
+            android:backgroundTint="@color/soft_pink"
+            android:textColor="@color/dark_text"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

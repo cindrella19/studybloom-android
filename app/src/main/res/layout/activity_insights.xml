@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg_lines">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Study Insights"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_text"
+            android:gravity="center"
+            android:padding="20dp" />
+
+        <!-- API 1: World Time -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current World Time"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+                <TextView
+                    android:id="@+id/insightTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- API 2: Motivation -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Random Study Quote"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+                <TextView
+                    android:id="@+id/insightQuote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:layout_marginTop="5dp"
+                    android:fontStyle="italic" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- API 3: Sample Stats -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Global Study Post (Live)"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_text" />
+                <TextView
+                    android:id="@+id/insightPlaceholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/refreshInsightsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Refresh Data"
+            android:backgroundTint="@color/soft_pink"
+            android:textColor="@color/dark_text" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

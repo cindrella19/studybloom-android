@@ -1,0 +1,34 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sage_green"/>
+        </shape>
+    </item>
+
+    <!-- Top pink blob -->
+    <item
+        android:top="-120dp"
+        android:left="-80dp">
+        <shape android:shape="oval">
+            <size
+                android:width="300dp"
+                android:height="220dp"/>
+            <solid android:color="@color/soft_pink"/>
+        </shape>
+    </item>
+
+    <!-- Bottom cream blob -->
+    <item
+        android:bottom="-140dp"
+        android:right="-100dp">
+        <shape android:shape="oval">
+            <size
+                android:width="320dp"
+                android:height="260dp"/>
+            <solid android:color="@color/cream_white"/>
+        </shape>
+    </item>
+
+</layer-list>

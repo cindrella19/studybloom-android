@@ -1,0 +1,18 @@
+.gradle/
+.local/
+.idea/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Firebase
+google-services.json
+
+# APK / AAB
+*.apk
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db

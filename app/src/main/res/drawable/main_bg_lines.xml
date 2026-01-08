@@ -1,0 +1,51 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sage_green"/>
+        </shape>
+    </item>
+
+    <!-- Top curved sage line -->
+    <item
+        android:top="-90dp"
+        android:left="-60dp">
+        <shape android:shape="oval">
+            <size
+                android:width="520dp"
+                android:height="260dp"/>
+            <solid android:color="#AFCBBC"/>
+        </shape>
+    </item>
+
+    <!-- Light diagonal sage line -->
+    <item
+        android:top="-140dp"
+        android:left="-260dp">
+        <rotate
+            android:fromDegrees="-25"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="rectangle">
+                <size
+                    android:width="900dp"
+                    android:height="90dp"/>
+                <solid android:color="#C7DDD2"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Mid subtle darker accent (dp-based, Android-safe) -->
+    <item
+        android:top="300dp"
+        android:left="-120dp">
+        <shape android:shape="oval">
+            <size
+                android:width="360dp"
+                android:height="80dp"/>
+            <solid android:color="#9FBEB1"/>
+        </shape>
+    </item>
+
+</layer-list>

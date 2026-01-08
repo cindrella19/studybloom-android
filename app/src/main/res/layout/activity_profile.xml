@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg_lines">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Profile Avatar Placeholder - Now with App Icon centered and rounded -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                app:cardBackgroundColor="@color/sage_green"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="6dp"
+                app:strokeColor="@color/dark_text"
+                app:strokeWidth="2.5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_study_bloom_logo"
+                    android:scaleType="centerCrop"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cream_white"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Your Name"
+                        android:textColorHint="@color/dark_text"
+                        app:hintTextColor="@color/dark_text"
+                        app:placeholderTextColor="@color/dark_text"
+                        app:boxStrokeColor="@color/dark_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profileNameInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/dark_text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Current Grade"
+                        android:textColorHint="@color/dark_text"
+                        app:hintTextColor="@color/dark_text"
+                        app:placeholderTextColor="@color/dark_text"
+                        app:boxStrokeColor="@color/dark_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profileGradeInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/dark_text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Email now as a block -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Registered Email"
+                        android:textColorHint="@color/dark_text"
+                        app:hintTextColor="@color/dark_text"
+                        app:placeholderTextColor="@color/dark_text"
+                        app:boxStrokeColor="@color/dark_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profileEmailInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:enabled="false"
+                            android:textColor="@color/dark_text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/saveProfileBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:backgroundTint="@color/sage_green"
+                        android:text="SAVE CHANGES"
+                        android:textColor="@color/dark_text"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/soft_pink"
+                android:text="SIGN OUT"
+                android:textColor="@color/dark_text"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:onClick="onBackClick"
+                android:text="BACK"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textColor="@color/dark_text"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
