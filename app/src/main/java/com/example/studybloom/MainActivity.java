@@ -15,7 +15,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
+import com.google.firebase.firestore.FirebaseFirestore;
+import java.util.HashMap;
+import java.util.Map;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -42,6 +44,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             finish();
             return;
         }
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        if (user != null) {
+
+            // 🔹 Study session (creates study_sessions)
+            Map<String, Object> session = new HashMap<>();
+            session.put("subject", "Math");
+            session.put("durationMinutes", 60);
+            session.put("date", System.currentTimeMillis());
+
+            db.collection("users")
+                    .document(user.getUid())
+                    .collection("study_sessions")
+                    .add(session);
+
+            // 🔹 Stats (creates stats)
+            Map<String, Object> stats = new HashMap<>();
+            stats.put("totalHours", 60);
+            stats.put("sessionsCount", 1);
+            stats.put("lastUpdated", System.currentTimeMillis());
+
+            db.collection("users")
+                    .document(user.getUid())
+                    .collection("stats")
+                    .document("summary")
+                    .set(stats);
+        }
+
 
         setContentView(R.layout.activity_main);
 
